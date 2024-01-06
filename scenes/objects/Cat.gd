@@ -41,5 +41,6 @@ func fish_score_update(new_score):
 
 func _on_area_2d_input_event(_viewport, event, _shape_idx):
 	if(event.is_action_pressed("ui_accept")):
+		SoundManager.play_sound(load("res://assets/audio/meow.wav"), "SoundEffects")
 		manual_animation_playing = true
 		animated_sprite.play("loaf")
