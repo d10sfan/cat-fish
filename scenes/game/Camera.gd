@@ -1,6 +1,6 @@
 extends Camera2D
 
-@export var map_size = Vector2(1152, 648)
+@export var map_size = Vector2(1440, 900)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

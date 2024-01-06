@@ -23,7 +23,8 @@ GodotLogger="*res://addons/logger/logger.gd"
 
 [display]
 
-window/stretch/mode="viewport"
+window/size/viewport_width=1440
+window/size/viewport_height=900
 
 [editor_plugins]
 
