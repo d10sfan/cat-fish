@@ -567,7 +567,7 @@ size = Vector2(78, 55)
 script = ExtResource("1_e36ig")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(3, 3)
+scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_5aoak")
 animation = &"loaf"
 autoplay = "excited"
