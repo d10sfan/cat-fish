@@ -21,6 +21,10 @@ SoundManager="*res://addons/sound_manager/sound_manager.gd"
 MaterialIconsDB="*res://addons/material-design-icons/icons/icons.gd"
 GodotLogger="*res://addons/logger/logger.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/logger/plugin.cfg", "res://addons/material-design-icons/plugin.cfg", "res://addons/sound_manager/plugin.cfg")
