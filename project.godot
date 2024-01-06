@@ -19,10 +19,11 @@ config/icon="res://icon.png"
 
 SoundManager="*res://addons/sound_manager/sound_manager.gd"
 MaterialIconsDB="*res://addons/material-design-icons/icons/icons.gd"
+GodotLogger="*res://addons/logger/logger.gd"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/material-design-icons/plugin.cfg", "res://addons/sound_manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/logger/plugin.cfg", "res://addons/material-design-icons/plugin.cfg", "res://addons/sound_manager/plugin.cfg")
 
 [gui]
 

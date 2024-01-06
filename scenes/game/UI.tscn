@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://dkm62f8pr3wah"]
+[gd_scene load_steps=11 format=3 uid="uid://dkm62f8pr3wah"]
 
 [ext_resource type="Script" path="res://scenes/game/UI.gd" id="1_fqqoh"]
 [ext_resource type="PackedScene" uid="uid://chfn0jw6ohcns" path="res://scenes/objects/Cat.tscn" id="2_xl8cg"]
 [ext_resource type="FontFile" uid="uid://dyn8i4h6xkx00" path="res://addons/material-design-icons/fonts/material_design_icons.ttf" id="3_4qxij"]
 [ext_resource type="Script" path="res://addons/material-design-icons/nodes/MaterialButton.gd" id="4_2xbu3"]
+[ext_resource type="PackedScene" uid="uid://c0txcb8cfutvs" path="res://scenes/game/AboutPopup.tscn" id="5_j7erq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_827dq"]
 
@@ -90,4 +91,8 @@ script = ExtResource("4_2xbu3")
 icon_name = "help-circle"
 icon_size = 64
 
+[node name="AboutPopup" parent="." instance=ExtResource("5_j7erq")]
+visible = false
+
 [connection signal="pressed" from="HUD/MarginContainer/HelpButton" to="." method="_on_help_button_pressed"]
+[connection signal="close_requested" from="AboutPopup" to="AboutPopup" method="_on_close_requested"]
