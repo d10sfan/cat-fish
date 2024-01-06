@@ -3,6 +3,7 @@ extends CanvasLayer
 @onready var score_value_label = $HUD/MarginContainer/ScoreContainer/HBoxContainer/ScoreValue
 @onready var remaining_value_label = $HUD/MarginContainer/RemainingContainer/HBoxContainer/RemainingValue
 @onready var cat = $HUD/MarginContainer/CatContainer/Cat
+@onready var about_popup = $AboutPopup
 
 func _ready():
 	fish_count_update(0)
@@ -18,4 +19,4 @@ func fish_score_update(new_score):
 
 
 func _on_help_button_pressed():
-	pass # Replace with function body.
+	about_popup.visible = true

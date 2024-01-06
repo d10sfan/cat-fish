@@ -48,6 +48,7 @@ func remove_self(success):
 	if success:
 		win_animation.visible = true
 		win_animation.play()
+		SoundManager.play_sound(load("res://assets/audio/success.wav"), "SoundEffects")
 	else:
 		delete_fish()
 

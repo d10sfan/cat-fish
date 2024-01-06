@@ -19,10 +19,16 @@ config/icon="res://icon.png"
 
 SoundManager="*res://addons/sound_manager/sound_manager.gd"
 MaterialIconsDB="*res://addons/material-design-icons/icons/icons.gd"
+GodotLogger="*res://addons/logger/logger.gd"
+
+[display]
+
+window/size/viewport_width=1440
+window/size/viewport_height=900
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/material-design-icons/plugin.cfg", "res://addons/sound_manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/logger/plugin.cfg", "res://addons/material-design-icons/plugin.cfg", "res://addons/sound_manager/plugin.cfg")
 
 [gui]
 
@@ -44,4 +50,4 @@ ui_accept={
 
 renderer/rendering_method="mobile"
 textures/vram_compression/import_etc2_astc=true
-environment/defaults/default_clear_color=Color(0.309804, 0.490196, 1, 1)
+environment/defaults/default_clear_color=Color(0.631373, 0.839216, 0.905882, 1)

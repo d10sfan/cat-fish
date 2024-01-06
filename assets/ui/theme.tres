@@ -1,16 +1,25 @@
-[gd_resource type="Theme" load_steps=5 format=3 uid="uid://bg6lpwis1gqcu"]
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://bg6lpwis1gqcu"]
 
 [ext_resource type="FontFile" uid="uid://ej74ye5r7pq0" path="res://assets/ui/rogue.ttf" id="1_vhogt"]
-[ext_resource type="Texture2D" uid="uid://coofhgiky2qww" path="res://assets/ui/blue_panel.png" id="2_xdg73"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o1usc"]
+content_margin_bottom = 0.0
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7fb38"]
-texture = ExtResource("2_xdg73")
-expand_margin_left = 10.0
-expand_margin_top = 10.0
-expand_margin_right = 10.0
-expand_margin_bottom = 10.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vc7qa"]
+bg_color = Color(0.337255, 0.537255, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.478431, 0.576471, 0.682353, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 6.0
+expand_margin_top = 6.0
+expand_margin_right = 6.0
+expand_margin_bottom = 6.0
 
 [resource]
 Label/colors/font_color = Color(1, 1, 1, 1)
@@ -21,7 +30,7 @@ Label/constants/outline_size = 0
 Label/constants/shadow_offset_x = 1
 Label/constants/shadow_offset_y = 1
 Label/constants/shadow_outline_size = 1
-Label/font_sizes/font_size = 32
+Label/font_sizes/font_size = 64
 Label/fonts/font = ExtResource("1_vhogt")
 Label/styles/normal = SubResource("StyleBoxEmpty_o1usc")
-PanelContainer/styles/panel = SubResource("StyleBoxTexture_7fb38")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_vc7qa")

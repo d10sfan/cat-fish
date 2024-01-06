@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://dkm62f8pr3wah"]
+[gd_scene load_steps=11 format=3 uid="uid://dkm62f8pr3wah"]
 
 [ext_resource type="Script" path="res://scenes/game/UI.gd" id="1_fqqoh"]
 [ext_resource type="PackedScene" uid="uid://chfn0jw6ohcns" path="res://scenes/objects/Cat.tscn" id="2_xl8cg"]
 [ext_resource type="FontFile" uid="uid://dyn8i4h6xkx00" path="res://addons/material-design-icons/fonts/material_design_icons.ttf" id="3_4qxij"]
 [ext_resource type="Script" path="res://addons/material-design-icons/nodes/MaterialButton.gd" id="4_2xbu3"]
+[ext_resource type="PackedScene" uid="uid://c0txcb8cfutvs" path="res://scenes/game/AboutPopup.tscn" id="5_j7erq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_827dq"]
 
@@ -26,10 +27,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 40
 
 [node name="ScoreContainer" type="PanelContainer" parent="HUD/MarginContainer"]
 layout_mode = 2
@@ -79,7 +80,7 @@ theme_override_colors/font_color = Color(0.337255, 0.537255, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.337255, 0.537255, 1, 1)
 theme_override_colors/font_focus_color = Color(0.337255, 0.537255, 1, 1)
 theme_override_fonts/font = ExtResource("3_4qxij")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 96
 theme_override_styles/normal = SubResource("StyleBoxEmpty_827dq")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_xfuee")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_8la2w")
@@ -88,6 +89,10 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_v8saw")
 text = "󰋗"
 script = ExtResource("4_2xbu3")
 icon_name = "help-circle"
-icon_size = 64
+icon_size = 96
+
+[node name="AboutPopup" parent="." instance=ExtResource("5_j7erq")]
+visible = false
 
 [connection signal="pressed" from="HUD/MarginContainer/HelpButton" to="." method="_on_help_button_pressed"]
+[connection signal="close_requested" from="AboutPopup" to="AboutPopup" method="_on_close_requested"]
